@@ -1,0 +1,16 @@
+[user]
+  name = Jakob Friedl
+  email = 71284620+jakobfriedl@users.noreply.github.com
+[credential]
+  helper = store
+[color]
+  ui = auto
+[alias]
+  lol = log --graph --decorate --oneline --all
+  ca = !git add -A && git commit -m
+  l = lol
+  s = status
+  co = checkout
+  b = branch
+[core]
+  editor = vim
