@@ -4,7 +4,7 @@ The configuration files are not linked dynamically, so they need to be copied to
 ```sh
 git clone https://github.com/jakobfriedl/.config ~/
 cp .config/zsh/.zshrc ~/
-cp -r .config/zsh/.oh-my-zsh ~/
+cp -r .config/zsh/custom ~/.oh-my-zsh
 cp .config/git/.gitconfig ~/
 cp .config/tmux/.tmux.conf ~/
 ```
