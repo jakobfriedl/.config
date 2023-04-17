@@ -1,6 +1,7 @@
 # Personal configuration files
 
 The configuration files are not linked dynamically, so they need to be copied to the home directory to apply the changes.
+
 ```sh
 git clone https://github.com/jakobfriedl/.config ~/
 cp .config/zsh/.zshrc ~/
@@ -9,6 +10,13 @@ cp .config/git/.gitconfig ~/
 cp .config/tmux/.tmux.conf ~/
 ```
 
+In order for NvChad to work, a newer version of neovim also needs to be installed.
+```
+wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
+chmod u+x nvim.appimage && ./nvim.appimage
+mv nvim.appimage nvim
+sudo mv nvim /usr/bin
+```
 
 This repository includes configuration files for the following applications:
 - **neovim**: customized NvChad setup
