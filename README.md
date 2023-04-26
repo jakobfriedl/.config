@@ -7,7 +7,6 @@ git clone https://github.com/jakobfriedl/.config ~/
 cp .config/zsh/.zshrc ~/
 cp -r .config/zsh/custom ~/.oh-my-zsh
 cp .config/git/.gitconfig ~/
-cp .config/tmux/.tmux.conf ~/
 ```
 
 In order for NvChad to work, a newer version of neovim also needs to be installed.
