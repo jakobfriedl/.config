@@ -22,4 +22,4 @@ This repository includes configuration files for the following applications:
 - **neovim**: customized NvChad setup
 - **git**: aliases and settings
 - **zsh**: aliases and customized starship setup
-- **tmux**: *not configured yet*
+- **tmux**: statusline and keybindings
