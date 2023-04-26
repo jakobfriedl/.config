@@ -78,7 +78,7 @@ tmux_conf_theme_colour_7="#eb6f92"    # white
 tmux_conf_theme_colour_8="#f6c177"    # dark gray
 tmux_conf_theme_colour_9="#ebbcba"    # yellow
 tmux_conf_theme_colour_10="#31748f"   # pink
-tmux_conf_theme_colour_11="#9ccfd8"   # green
+tmux_conf_theme_colour_11="#86b9c2"   # green
 tmux_conf_theme_colour_12="#c4a7e7"   # light gray
 tmux_conf_theme_colour_13="#21202e"   # white
 tmux_conf_theme_colour_14="#403d52"   # dark gray
@@ -179,7 +179,7 @@ tmux_conf_theme_window_status_fg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_attr="none"
 #tmux_conf_theme_window_status_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
-tmux_conf_theme_window_status_format="#{circled_window_index} #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
+tmux_conf_theme_window_status_format="#{circled_window_index} #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,\\udb80\\udc9e,}#{?window_zoomed_flag,\\uf848,}"
 #tmux_conf_theme_window_status_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
 
 # window current status style
@@ -196,7 +196,7 @@ tmux_conf_theme_window_status_current_fg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_current_bg="$tmux_conf_theme_colour_10"
 tmux_conf_theme_window_status_current_attr="bold"
 #tmux_conf_theme_window_status_current_format="#I #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
-tmux_conf_theme_window_status_current_format="#{circled_window_index} #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,!,}#{?window_zoomed_flag,Z,}"
+tmux_conf_theme_window_status_current_format="#{circled_window_index} #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,\\udb80\\udc9e,}#{?window_zoomed_flag,\\uf848,}"
 #tmux_conf_theme_window_status_current_format="#{circled_session_name} #W#{?#{||:#{window_bell_flag},#{window_zoomed_flag}}, ,}#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}"
 
 # window activity status style
@@ -251,19 +251,19 @@ tmux_conf_theme_right_separator_sub='\uE0B7'  #   PowerlineSymbols.otf font, see
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" #{username}#{username_ssh}#{root} | #{hostname}#{hostname_ssh}"
-tmux_conf_theme_status_right=" #{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b"
+tmux_conf_theme_status_left=" \ue24f | #{username}#{username_ssh}#{root} ,, #{hostname}#{hostname_ssh} |   "
+tmux_conf_theme_status_right="   | #{?battery_status,#{battery_status} ,}\uf578#{?battery_percentage, #{battery_percentage},} , %H:%M |%a ,, %d %b | \ue24f "
 
 # continue here
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_6"
+tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_11,$tmux_conf_theme_colour_3"
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_3"
+tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_3,$tmux_conf_theme_colour_4,$tmux_conf_theme_colour_7"
 tmux_conf_theme_status_right_attr="none,none,bold"
 
 # pairing indicator
@@ -309,7 +309,7 @@ tmux_conf_battery_bar_length="auto"
 
 # battery bar palette, possible values are:
 #   - gradient (default)
-#   - heat
+#   -true
 #   - "colour_full_fg,colour_empty_fg,colour_bg"
 tmux_conf_battery_bar_palette="gradient"
 #tmux_conf_battery_bar_palette="#d70000,#e4e4e4,#000000"   # red, white, black
@@ -329,14 +329,14 @@ tmux_conf_battery_vbar_palette="gradient"
 #tmux_conf_battery_vbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
-tmux_conf_battery_status_charging="↑"       # U+2191
-tmux_conf_battery_status_discharging="↓"    # U+2193
+tmux_conf_battery_status_charging="\uf0e7"       # U+2191
+tmux_conf_battery_status_discharging=" " # "↓"    # U+2193
 #tmux_conf_battery_status_charging="🔌"     # U+1F50C
 #tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
-tmux_conf_theme_clock_colour="$tmux_conf_theme_colour_4"
+tmux_conf_theme_clock_colour="$tmux_conf_theme_colour_10"
 tmux_conf_theme_clock_style="24"
 
 
@@ -348,7 +348,7 @@ tmux_conf_theme_clock_style="24"
 #   - disabled
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel, xclip or wl-copy
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
@@ -378,7 +378,7 @@ bind n next-window #!important
 bind p previous-window #!important
 
 # move status line to top
-#set -g status-position top
+# set -g status-position top
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -445,6 +445,10 @@ tmux_conf_uninstall_plugins_on_reload=true
 #
 # online() {
 #   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
+# }
+# 
+# get_ip() {
+#   ifconfig -a | awk '$1=="inet" && $5=="broadcast"{print $2}'
 # }
 #
 # "$@"
