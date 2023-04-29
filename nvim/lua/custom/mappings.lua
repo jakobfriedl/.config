@@ -9,7 +9,6 @@ M.general = {
     ["<Down>"] = {"<NOP>", "disable down arrow", opts = {}},
     ["<Left>"] = {"<NOP>", "disable left arrow", opts = {}},
     ["<Right>"] = {"<NOP>", "disable right arrow", opts = {}},
-    ["<leader>h"] = {":nohlsearch<CR>", "clear search highlighting", opts = {}},
   },
   v = {
     ["<A-j>"] = {":m+1<CR>", "move line down", opts = {}},
