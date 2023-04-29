@@ -252,7 +252,7 @@ tmux_conf_theme_right_separator_sub='\uE0B7'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" \ue24f | #{username}#{username_ssh}#{root} ,, #{hostname}#{hostname_ssh} |   "
-tmux_conf_theme_status_right="   | #{?battery_status,#{battery_status} ,}\uf578#{?battery_percentage, #{battery_percentage},} , %H:%M |%a ,, %d %b | \ue24f "
+tmux_conf_theme_status_right=" #( ~/.config/tmux/get-ip.sh ) | #{?battery_status,#{battery_status} ,}\uf578#{?battery_percentage, #{battery_percentage},} , %H:%M |%a ,, %d %b | \ue24f "
 
 # continue here
 
