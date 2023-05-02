@@ -255,7 +255,7 @@ tmux_conf_theme_right_separator_sub='\uE0B7'  #   PowerlineSymbols.otf font, see
 # Prompt settings
 
 tmux_conf_theme_status_left=" \ue24f | #{username}#{username_ssh}#{root} , #{hostname}#{hostname_ssh} |   "
-tmux_conf_theme_status_right=" \uf46d #( ~/.config/tmux/priv-ip.sh ) , \ufa9e#( ~/.config/tmux/pub-ip.sh ) | #{?battery_status,#{battery_status} ,}\uf578#{?battery_percentage, #{battery_percentage},} , %H:%M |%a , %d %b | \ue24f "
+tmux_conf_theme_status_right="  \uf46d #( ~/.config/tmux/priv-ip.sh ) , \ufa9e#( ~/.config/tmux/pub-ip.sh ) | #{?battery_status,#{battery_status} ,}\uf578#{?battery_percentage, #{battery_percentage},} , %H:%M |%a , %d %b | \ue24f "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_2,$tmux_conf_theme_colour_6"
@@ -378,6 +378,11 @@ bind C-a send-prefix
 bind n next-window #!important
 bind p previous-window #!important
 
+bind -n M-Left select-pane -L #!important
+bind -n M-Right select-pane -R #!important
+bind -n M-Up select-pane -U #!important
+bind -n M-Down select-pane -D #!important
+
 # move status line to top
 # set -g status-position top
 
@@ -422,6 +427,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
+
+set -g @plugin 'jamesoff/tmux-vpn'
 
 
 # -- custom variables ----------------------------------------------------------
