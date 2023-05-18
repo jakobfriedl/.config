@@ -383,6 +383,10 @@ bind -n M-Right select-pane -R #!important
 bind -n M-Up select-pane -U #!important
 bind -n M-Down select-pane -D #!important
 
+bind '"' split-window -c "#{pane_current_path}" #!important
+bind % split-window -h -c "#{pane_current_path}" #!important
+bind c new-window -c "#{pane_current_path}" #!important
+
 # move status line to top
 # set -g status-position top
 
