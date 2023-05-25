@@ -5,4 +5,4 @@ alias ls="exa -l -a --header --sort type --icons"
 alias tree="exa --tree" 
 alias get_linpeas="wget https://github.com/carlospolop/PEASS-ng/releases/download/20230425-bd7331ea/linpeas.sh"
 alias get_php_shell="wget https://raw.githubusercontent.com/ivan-sincek/php-reverse-shell/master/src/reverse/php_reverse_shell.php"
-
+alias rustscan="docker run -it --rm --name rustscan rustscan/rustscan:2.1.1 -a"
